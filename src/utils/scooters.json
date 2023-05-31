@@ -1,0 +1,75 @@
+{
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 55511,
+                "title": "",
+                "description": "Madrid central",
+                "battery": 50
+            },
+            "geometry": {
+                "lat": 40.4,
+                "lng": -3.6862,
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 55513,
+                "title": "Madrid Central",
+                "description": "A lakefront park on Chicago's south side",
+                "battery": 70
+            },
+            "geometry": {
+                "lat": 40.4,
+                "lng": -3.7,
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 55514,
+                "title": "Madrid Central",
+                "description": "A downtown park known for its art installations and unique architecture",
+                "battery": 89
+            },
+            "geometry": {
+                "lat": 40.4096,
+                "lng": -3.695,
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 55515,
+                "title": "Madrid Central",
+                "description": "A downtown park that is the site of many of Chicago's favorite festivals and events",
+                "battery": 95
+            },
+            "geometry": {
+                "lat": 40.405,
+                "lng": -3.699,
+                "type": "Point"
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 55520,
+                "title": "Las Palmas",
+                "description": "A downtown park that is the site of many of Chicago's favorite festivals and events",
+                "battery": 95
+            },
+            "geometry": {
+                "lat": 28.10807,
+                "lng": -15.422,
+                "type": "Point"
+            }
+        }
+    ],
+    "type": "FeatureCollection"
+}
