@@ -6,6 +6,7 @@ const tokenGenerator = require("../utils/tokenGenerator")
 const db = startConnection();
 
 const loginController = async (req, res) => {
+    console.log(444, req);
     const { email, password } = req.body;
     try {
         console.log(req.body); 
