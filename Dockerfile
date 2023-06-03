@@ -1,19 +1,25 @@
-FROM node:18
+FROM node:16
 
-# Create app directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
+ENV TWILIO_ACCOUNT_SID=ACoñaJSDKAND \
+    TWILIO_AUTH_TOKEN=1234567 \
+    JWT_SECRET=secretojwt \
+    MYSQL_USER=admin \
+    MYSQL_PASS=12345678 \
+    MYSQL_USER_VOLUNTEER=volunteer \
+    MYSQL_PASS_VOLUNTEER=password \
+    MYSQL_NAME=mysqldb \
+    MYSQL_HOST=database-1.cqjpydkuzasu.us-west-2.rds.amazonaws.com
+
+
 COPY package*.json ./
 
-RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
+RUN npm ci
 
-# Bundle app source
-COPY . .
+COPY . . 
 
-EXPOSE 8080
-CMD node app.js
+EXPOSE 3000
+
+CMD ["npm", "start"]
+
