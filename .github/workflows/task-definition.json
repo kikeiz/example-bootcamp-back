@@ -1,0 +1,118 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-west-2:343397212430:task-definition/example-api-project-ecs:2",
+    "containerDefinitions": [
+        {
+            "name": "example-api-project-ecs",
+            "image": "343397212430.dkr.ecr.us-west-2.amazonaws.com/example-api-project-ecs:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "example-api-project-ecs-3000-tcp",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [
+                {
+                    "name": "MYSQL_PASS",
+                    "value": "12345678"
+                },
+                {
+                    "name": "MYSQL_NAME",
+                    "value": "mysqldb"
+                },
+                {
+                    "name": "JWT_SECRET",
+                    "value": "secretojwt"
+                },
+                {
+                    "name": "MYSQL_USER",
+                    "value": "admin"
+                },
+                {
+                    "name": "MYSQL_USER_VOLUNTEER",
+                    "value": "volunteer"
+                },
+                {
+                    "name": "MYSQL_HOST",
+                    "value": "database-1.cqjpydkuzasu.us-west-2.rds.amazonaws.com"
+                },
+                {
+                    "name": "MYSQL_PASS_VOLUNTEER",
+                    "value": "password"
+                },
+                {
+                    "name": "TWILIO_AUTH_TOKEN",
+                    "value": "1234567"
+                },
+                {
+                    "name": "TWILIO_ACCOUNT_SID",
+                    "value": "ACoñaJSDKAND"
+                }
+            ],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "/ecs/example-api-project-ecs",
+                    "awslogs-region": "us-west-2",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            }
+        }
+    ],
+    "family": "example-api-project-ecs",
+    "executionRoleArn": "arn:aws:iam::343397212430:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 2,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "2048",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-06-04T09:14:51.649Z",
+    "registeredBy": "arn:aws:iam::343397212430:root",
+    "tags": []
+}
