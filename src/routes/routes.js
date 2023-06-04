@@ -8,7 +8,7 @@ const reports = require("../controllers/reports.controllers")
 
 
 //TEST
-router.get("/", (req, res) => res.send('RECEIVED'))
+router.get("/", (req, res) => res.send('RECEIVEDD'))
 
 //USER
 router.post("/user-register", user.register)
