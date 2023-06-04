@@ -1,4 +1,4 @@
-FROM node:16
+FROM --platform=linux/amd64 node:16-alpine3.17
 
 WORKDIR /app
 
@@ -19,7 +19,7 @@ RUN npm ci
 
 COPY . . 
 
-EXPOSE 3000
+EXPOSE 80
 
 CMD ["npm", "start"]
 
