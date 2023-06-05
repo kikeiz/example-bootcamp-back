@@ -99,6 +99,7 @@ const volunteer = {
         }
     },
     getLogged: async (req, res)=>{
+        console.log(33, req.cookies.session);
         const con = await conexion.abrir(req.cookies.session);
         try {
             data = jwt.verify(req.cookies.session, process.env.JWT_SECRET)
@@ -106,8 +107,6 @@ const volunteer = {
             res.json(await volunt.findByPk(data.data.id))
         } catch (error) {
             res.json(error);
-        } finally {
-            await conexion.cerrar(con);
         }
     }
 }
